@@ -1,2 +1,263 @@
-# Anwar-hosain-BBA
-আমরা কথায় ও কাজে ্রক । কালারমারছড়া ইউনিয়ন এর উন্নয়ন আমির হোসেনের সোযোগ্য পুত্র আনোয়র হোসেন ছাড়া বিকল্প পথ নাই । 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জনাব আনোয়ার হোসেন</title>
+    <!-- Social Media Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* সাধারণ স্টাইল ও ব্যাকগ্রাউন্ড লোগো */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* ব্যাকগ্রাউন্ড লোগোর জন্য নিচের লাইনে আপনার লোগোর লিংক দিন */
+            background-image: url('আপনার_লোগোর_লিংক_এখানে_দিন.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 50%;
+            background-color: rgba(240, 248, 255, 0.92); /* লোগোকে জলছাপের মত দেখানোর জন্য */
+            background-blend-mode: overlay;
+        }
+
+        /* হেডার ডিজাইন */
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .main-title {
+            color: #008000; /* সবুজ কালার */
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .sub-title {
+            color: #333;
+            font-size: 1.5em;
+            margin: 10px 0 0 0;
+        }
+
+        /* জাঁকজমকপূর্ণ নোটিশ বোর্ড */
+        .notice-container {
+            background: linear-gradient(45deg, #ff0000, #ff7300, #ff0000);
+            color: white;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-top: 3px solid gold;
+            border-bottom: 3px solid gold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* বক্সের গ্রিড ডিজাইন */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* প্রতিটি বক্সের স্টাইল */
+        .box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* বক্সের হোভার ও ভাঙার (Break) অ্যানিমেশন */
+        .box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+        }
+        .box:active {
+            transform: scale(0.95);
+        }
+
+        /* মডাল (বক্স ওপেন হওয়ার পরের ডিজাইন) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.5s;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 20px gold;
+            animation: slideIn 0.5s;
+        }
+        .close-btn {
+            color: red;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* মডালের ভেতরের তথ্যের স্টাইল */
+        .info-group {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .info-group label {
+            font-weight: bold;
+            color: #2a5298;
+        }
+
+        /* অ্যানিমেশন কিফ্রেম */
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @keyframes slideIn { from {transform: translateY(-50px) scale(0.8); opacity: 0;} to {transform: translateY(0) scale(1); opacity: 1;} }
+
+        /* সোশ্যাল মিডিয়া লোগো (ফুটার) */
+        .social-footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            margin-top: 50px;
+        }
+        .social-footer a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-footer a:hover {
+            color: gold;
+            transform: scale(1.2);
+        }
+
+        /* ডানপাশের অভিযোগ বক্স */
+        .complaint-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: red;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255,0,0,0.4);
+            border: 2px solid white;
+            transition: 0.3s;
+            z-index: 100;
+        }
+        .complaint-btn:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- হেডার সেকশন -->
+    <div class="header">
+        <h1 class="main-title">জনাব আনোয়ার হোসেন বিবিএ</h1>
+        <h2 class="sub-title">সম্ভাব্য চেয়ারম্যান পদপ্রার্থী</h2>
+    </div>
+
+    <!-- নোটিশ বোর্ড (স্ক্রোলিং) -->
+    <div class="notice-container">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            🚨 জরুরি নোটিশ: এখানে আপনার জাঁকজমকপূর্ণ নোটিশের লেখাটি চলবে। যেকোনো তথ্য বা আপডেট এখানে যুক্ত করতে পারবেন।যেমন: কালকে আধারঘোনা পান বাজারের মাঠে একটা গণ মিটিং হবে ্ সবার উপস্থীতি কামনা করছি । 🚨
+        </marquee>
+    </div>
+
+    <!-- বক্স সেকশন -->
+    <div class="grid-container">
+        <div class="box" onclick="openModal('পরিচয়')">পরিচয়</div>
+        <div class="box" onclick="openModal('নোটিশ বোর্ড')">নোটিশ বোর্ড</div>
+        <div class="box" onclick="openModal('কালারমার ছড়া ইউনিয়ন পরিষদ সম্পর্কে')">আমাদের  কালারমার ছড়া ইউনিয়ন সম্পর্কে </div>
+        <div class="box" onclick="openModal('আমাদের পরিকল্পনা')">আমাদের পরিকল্পনা</div>
+        <div class="box" onclick="openModal('ডোনেট')">ডোনেট</div>
+        <div class="box" onclick="openModal('ওয়েব ডেভেলপার')">ওয়েব ডেভেলপার</div>
+    </div>
+
+    <!-- মডাল (বক্স ওপেন হলে যা দেখাবে) -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color: #008000; text-align: center; border-bottom: 2px solid green; padding-bottom: 10px;">শিরোনাম</h2>
+            <h4 style="text-align: center; color: gray;">"কথায় কাজে 100/100"</h4>
+            
+            <div id="modalBody">
+                <div class="info-group"><label>নাম :</label> <span>জনাব আনোয়ার হেসেন </span></div>
+                <div class="info-group"><label>মাতা :</label> <span>সুলতান জানেনা</span></div>
+                <div class="info-group"><label>পিতা :</label> <span>আমির হোসেন </span></div>
+                <div class="info-group"><label>মোবাইল :</label>0129292965 <span></span></div>
+                <div class="info-group"><label>ঠিকানা :</label> <span>আমাকে লিখে পাঠালে আমি এখানে বসিয়ে দিতে পারি</span></div>
+                <p style="margin-top: 20px; color: #555;">[স্যার, আপনি চাইলে এখানে আপনার পছন্দমত আরো ঘর যুক্ত করতে পারবেন।]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ফুটার (সোশ্যাল মিডিয়া লোগো) -->
+    <div class="social-footer">
+        <!-- লিংকগুলোর 'href' এর জায়গায় আপনার প্রোফাইলের লিংক বসিয়ে দিবেন -->
+        <a href="https://facebook.com/আপনার_আইডি" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/আপনার_চ্যানেল" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/আপনার_নাম্বার" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/আপনার_আইডি" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/আপনার_আইডি" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://t.me/আপনার_ইউজারনেম" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+
+    <!-- অভিযোগ বক্স (ডানপাশে ফ্লোটিং) -->
+    <!-- mailto: লিংকে আপনার ইমেইল দিয়ে দিন, ক্লিক করলে সরাসরি আপনার কাছে মেইল আসবে -->
+    <a href="mailto:আপনার_ইমেইল@gmail.com?subject=অভিযোগ বক্স থেকে বার্তা" style="text-decoration: none;">
+        <div class="complaint-btn">
+            <i class="fas fa-envelope"></i> অভিযোগ দিন
+        </div>
+    </a>
+
+    <!-- জাভাস্ক্রিপ্ট -->
+    <script>
+        // মডাল ওপেন করার ফাংশন
+        function openModal(title) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("infoModal").style.display = "block";
+        }
+
+        // মডাল ক্লোজ করার ফাংশন
+        function closeModal() {
+            document.getElementById("infoModal").style.display = "none";
+        }
+
+        // মডালের বাইরে ক্লিক করলে যাতে বন্ধ হয়ে যায়
+        window.onclick = function(event) {
+            var modal = document.getElementById("infoModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
